@@ -23,7 +23,7 @@ class RealmService {
   class func updatePersona(persona : Persona, skill : Skill) {
     let realm = try! Realm()
     
-    try! realm.write {
+    try! realm.write {
       persona.skills.append(skill)
       realm.add(persona, update : true)
       NSLog("actualice persona")
